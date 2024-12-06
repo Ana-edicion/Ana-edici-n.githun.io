@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continuación - El Reino del Vértigo</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 24px;
+            background-color: #000;
+            color: #fff;
+            margin: 20px;
+            line-height: 1.8;
+        }
+        .link {
+            color: #1e90ff;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .link:hover {
+            color: #00bfff;
+        }
+    </style>
+</head>
+<body>
+    <div class="narrativa">
+        <p>
+            El mensaje en la pantalla desaparece, y todo a tu alrededor comienza a moverse. Las pantallas que flotaban en el vacío giran y se multiplican, formando un torbellino de imágenes y luces que te envuelve por completo. No hay dirección, no hay arriba ni abajo. Sólo caos.
+        </p>
+        <p>
+            Los destellos son cada vez más intensos: una ciudad que colapsa en cámara lenta, rostros que se deforman en patrones geométricos, anuncios que gritan con colores saturados: "Compra", "Siente", "Olvida". Todo es rápido, confuso, y parece diseñado para impedirte pensar.
+        </p>
+        <p>
+            Sientes cómo la presión comienza a acumularse en tu mente, como si tu capacidad para concentrarte se estuviera derritiendo bajo el peso de tantas imágenes. El instinto te dice que cierres los ojos, que bloquees el ruido, pero incluso con los ojos cerrados, las luces y sonidos se filtran, invadiendo cada rincón de tu percepción.
+        </p>
+        <p>
+            — <em>Concéntrate</em> — susurra una voz familiar: Ariadna. Su tono es firme, aunque parece estar muy lejos. — <em>Todo esto es una distracción. Es el truco más antiguo de La Red. Quiere que te pierdas en el flujo, pero hay patrones. Siempre hay patrones. Si los encuentras, desbloquearás tu primer recuerdo. Es tu única salida.</em> —
+        </p>
+        <p>
+            <span class="link" onclick="abrirVentanaDesafio()">Empezar el Desafío: Encontrar los Patrones</span>
+        </p>
+    </div>
+
+    <script>
+        // Función para abrir la ventana del desafío
+        function abrirVentanaDesafio() {
+            const ancho = 600;
+            const alto = 400;
+            const x = (window.innerWidth - ancho) / 2; // Centrar horizontalmente
+            const y = (window.innerHeight - alto) / 2; // Centrar verticalmente
+
+            window.open(
+                "desafio.html",
+                "_blank",
+                `width=${ancho},height=${alto},left=${x},top=${y},scrollbars=yes,resizable=yes`
+            );
+        }
+    </script>
+</body>
+</html>
+

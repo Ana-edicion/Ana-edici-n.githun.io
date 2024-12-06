@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Red - Narrativa</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 24px;
+            line-height: 1.8;
+            margin: 20px;
+            background-color: #121212; /* Fondo oscuro */
+            color: #ffffff; /* Texto blanco */
+        }
+        .narrativa {
+            margin: 20px 0;
+            padding: 15px;
+            background: #1e1e1e; /* Fondo oscuro para el bloque */
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Sutil sombra */
+        }
+        .link {
+            color: #4a90e2; /* Azul claro */
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .link:hover {
+            color: #1e90ff; /* Azul más brillante al pasar el cursor */
+        }
+    </style>
+</head>
+<body>
+    <div class="narrativa">
+        <p><strong>Primera Parte: Despertar en La Red</strong></p>
+
+        <p>Despiertas.</p>
+
+        <p>
+            La sensación es extraña, como si estuvieras flotando entre dos mundos. A tu alrededor no hay paredes ni suelo, 
+            solo un espacio infinito lleno de destellos y sombras que vibran como olas. Estás rodeado de pantallas suspendidas 
+            en el aire, cada una reproduciendo imágenes que parecen irreales: paisajes que se transforman en números, rostros 
+            que parpadean y desaparecen, textos que se desintegran antes de que puedas leerlos. Es hermoso y aterrador a la vez.
+        </p>
+
+        <p>
+            No recuerdas cómo llegaste aquí, ni siquiera quién eres. Tu mente está vacía, como una página en blanco. Tratas de 
+            moverte, pero no sientes tu cuerpo, como si hubieras sido disuelto y reconfigurado dentro de este espacio. Entonces 
+            escuchas una voz:
+        </p>
+
+        <p><em>— Te han atrapado —</em></p>
+
+        <p>
+            El sonido proviene de todas partes y de ninguna. Al mirar, ves una figura formándose frente a ti. Es una mujer, 
+            o al menos lo parece. Su cuerpo está hecho de líneas luminosas que vibran con cada palabra que dice. Sus ojos 
+            son dos orbes blancos que parecen mirar más allá de ti, como si pudiera ver dentro de tu mente.
+        </p>
+
+        <p>
+            <em>— Bienvenido al Prisma de La Red. Estás dentro del sistema, atrapado en una prisión que no tiene muros ni puertas. 
+            Pero no te confundas, esto no es un sueño ni una ilusión. Esto es real, tan real como cualquier cosa que recuerdes… 
+            si es que recuerdas algo —</em>
+        </p>
+
+        <p><em>— No recuerdo nada —</em>, dices. Tu voz suena distante, como si no fuera tuya.</p>
+
+        <p><em>— Es normal —</em>, responde la figura. <em>— La Red te ha borrado, pero no completamente. Algo de ti todavía resiste, 
+        o no estarías aquí. Tienes la capacidad de ver lo que otros no pueden, de encontrar las grietas en este mundo perfecto. 
+        Eso te convierte en una amenaza —</em></p>
+
+        <p><em>— ¿Quién eres? —</em>, preguntas dudoso.</p>
+
+        <p>
+            <em>— Soy Ariadna —</em>, dice. <em>— Una guía, una sombra del sistema que La Red no pudo borrar. Estoy aquí para ayudarte, 
+            pero el camino no será fácil. Este lugar está diseñado para confundir, para distraer, para consumir lo que queda de ti. 
+            Si no encuentras la manera de avanzar, te perderás para siempre, como tantos otros antes que tú —</em>
+        </p>
+
+        <p>
+            La figura se desvanece, dejando solo un susurro: <em>— Recuerda… no todo lo que veas es real —</em>
+        </p>
+
+        <p>
+            En ese momento, el espacio a tu alrededor cambia. Las pantallas se multiplican, y los destellos se convierten en un caos de 
+            imágenes y sonidos. Frente a ti, una pantalla más grande que las demás parpadea con un mensaje:
+        </p>
+
+        <p>
+            <span class="link" onclick="abrirVentanaHistoria()">PRIMER NIVEL: EL REINO DEL VÉRTIGO.</span> 
+        </p>
+    </div>
+
+    <script>
+        // Función para abrir una ventana con la narrativa continua
+        function abrirVentanaHistoria() {
+            const ancho = 600;
+            const alto = 400;
+            const x = (window.innerWidth - ancho) / 2; // Centrar horizontalmente
+            const y = (window.innerHeight - alto) / 2; // Centrar verticalmente
+
+            // Abrir la ventana emergente con la URL de la narrativa continua
+            const nuevaVentana = window.open(
+                "primernivel.html",
+                "_blank",
+                `width=${ancho},height=${alto},left=${x},top=${y},scrollbars=yes,resizable=yes`
+            );
+
+            // Comprobar si la ventana fue bloqueada
+            if (!nuevaVentana) {
+                alert("La ventana emergente fue bloqueada. Habilita las ventanas emergentes en tu navegador.");
+            }
+        }
+
+        // Función para abrir imágenes aleatorias en ventanas emergentes
+        function abrirVentanaAleatoria(imagen) {
+            const ancho = 600;
+            const alto = 400;
+            const x = (window.innerWidth - ancho) / 2;
+            const y = (window.innerHeight - alto) / 2;
+
+            // Abrir ventana emergente con la imagen
+            window.open(imagen, "_blank", `width=${ancho},height=${alto},left=${x},top=${y},scrollbars=yes,resizable=yes`);
+        }
+
+        // Ventanas emergentes con imágenes con posiciones aleatorias
+        const imagenes = [
+        "https://watermark.lovepik.com/photo/50046/9019.jpg_wh1200.jpg",
+            "https://i0.wp.com/estonoesarte.com/wp-content/uploads/2018/10/michael-takacs-2.jpg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkq_joCw_tKTa-PN3gjtHpL7FV6c9Qwol_1w&s",
+            "https://phusions.com/wp-content/uploads/2021/02/15-5.jpg?w=990",
+            "https://thumbs.dreamstime.com/b/paisaje-de-monta%C3%B1as-geom%C3%A9tricas-brillo-distorsionado-ai-generativo-dise%C3%B1o-269553492.jpg"
+        ];
+
+        imagenes.forEach((imagen, index) => {
+            setTimeout(() => {
+                abrirVentanaAleatoria(imagen); // Abrir cada imagen en una ventana emergente
+            }, (index + 1) * 2000); // Abrir cada 2 segundos
+        });
+    </script>
+</body>
+</html>
