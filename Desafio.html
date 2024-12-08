@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Desafío: Encontrar los Patrones</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 24px;
+            background-color: black;
+            color: white;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        button {
+            background-color: lightblue;
+            color: black;
+            font-family: "Times New Roman", Times, serif;
+            font-size: 24px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: deepskyblue;
+        }
+    </style>
+    <script>
+        // Función para abrir una ventana emergente específica
+        function abrirVentana(url, titulo) {
+            window.open(url, titulo, "width=500,height=400");
+        }
+
+        // Función para abrir imágenes aleatorias en ventanas emergentes
+        function abrirVentanaAleatoria(imagen) {
+            const ancho = 600;
+            const alto = 400;
+            const x = (window.innerWidth - ancho) / 2;
+            const y = (window.innerHeight - alto) / 2;
+
+            // Abrir ventana emergente con la imagen
+            window.open(imagen, "_blank", `width=${ancho},height=${alto},left=${x},top=${y},scrollbars=yes,resizable=yes`);
+        }
+
+        // Ventanas emergentes con imágenes en posiciones aleatorias
+        window.onload = function () {
+            const imagenes = [
+                "https://img.freepik.com/fotos-premium/imagen-ojos-blanco-negro-muy-realista-reflejos-cromo_899449-150669.jpg",
+                "https://img.freepik.com/fotos-premium/reloj-antiguo-bodegon-blanco-negro_94574-12591.jpg",
+                "https://www.lapalabrabierta.com/lapalabrabierta/wp-content/uploads/2023/04/NPCMI7NVIRGLBJXCI3VYOEWGPE.jpg",
+                "https://static.nationalgeographic.es/files/styles/image_3200/public/01_20.jpg?w=1600&h=1068",
+                "https://static.vecteezy.com/system/resources/previews/046/736/722/non_2x/amidst-the-downpour-the-city-becomes-a-distorted-landscape-with-blurred-neon-reflections-bouncing-off-wet-windows-and-glistening-streets-to-create-a-surreal-scene-of-urban-chaos-photo.jpg",
+                "https://watermark.lovepik.com/photo/50046/9054.jpg_wh1200.jpg",
+                "https://www.muyinteresante.com/wp-content/uploads/sites/5/2023/05/11/645ca2cb29f8b.jpeg",
+                "https://img.freepik.com/fotos-premium/imagen-blanco-negro-ojo-humano-pestanas-pintadas_124507-66645.jpg",
+                "https://st4.depositphotos.com/40853472/41379/i/950/depositphotos_413797326-stock-photo-time-running-out-concept-shows.jpg",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkhUCSWdyBMHhgtJPWU0LFg__-bU7gxzBP7w&s",
+                "https://content.nationalgeographic.com.es/medio/2023/05/22/volcan-en-erupcion_f1db82b4_1389190959_230522121751_1280x853.jpg",
+                "https://ecosistemas.win/wp-content/uploads/tormenta-electrica-1.jpg",
+            ];
+
+            imagenes.forEach((imagen, index) => {
+                setTimeout(() => {
+                    abrirVentanaAleatoria(imagen); // Abrir cada imagen en una ventana emergente
+                }, (index + 1) * 2000); // Abrir cada 2 segundos
+            });
+        };
+    </script>
+</head>
+<body>
+    <h1>El Desafío: Encontrar los Patrones</h1>
+    <p>
+        La tormenta de imágenes se ralentiza por un instante, lo suficiente para que notes que no todo lo que aparece en las pantallas es caótico. Entre el caos, ves elementos recurrentes que brillan con una intensidad diferente, casi como si estuvieran llamándote.
+    </p>
+    <p>
+        Tu instinto te dice que estas imágenes son importantes. Están dispersas entre cientos de distracciones. Sientes que debes enfocar tu mirada en estos patrones antes de que el torbellino te arrastre por completo.
+    </p>
+    <p>
+        A medida que comienzas a buscar estas imágenes, las pantallas parecen reaccionar, acelerando nuevamente. Cada vez que una de las imágenes clave aparece, tienes apenas un instante para enfocarte en ella antes de que desaparezca en el caos.
+    </p>
+    <p>
+        De repente, una nueva figura surge entre las pantallas: La Red, una sombra digital que parece hecha de fragmentos de código. Su rostro es una máscara sin rasgos definidos, pero su presencia es opresiva, y su voz resuena como un eco metálico.
+    </p>
+    <p>
+        — ¿Qué buscas, Vidente? Aquí no hay salida, solo flujo. Es inútil resistirse. Déjate llevar, y nunca tendrás que cuestionar nada de nuevo—.
+    </p>
+    <p>
+        La Red extiende un brazo, y las pantallas a tu alrededor empiezan a multiplicarse, proyectando imágenes cada vez más rápidas y perturbadoras. Es como si el laberinto estuviera vivo, intentando aplastar tu mente bajo su peso.
+    </p>
+    <p>
+        — Tienes que decidir— susurra Ariadna. — Concéntrate en las imágenes clave o escucha a La Red y ríndete. Pero recuerda: si cedes, perderás más que este nivel. Perderás tu capacidad de ver—.
+    </p>
+
+    <!-- Opciones para continuar -->
+    <h2>¿Qué harás?</h2>
+    <button onclick="abrirVentana('resistir.html', 'Resistir')">Resistir y buscar los patrones</button>
+    <button onclick="abrirVentana('ceder.html', 'Rendirse')">Ceder/rendirse</button>
+</body>
+</html>
