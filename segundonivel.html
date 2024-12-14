@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segundo Nivel</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 24px;
+            background-color: black;
+            color: white;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        button {
+            background-color: lightblue;
+            color: black;
+            font-family: "Times New Roman", Times, serif;
+            font-size: 24px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+    </style>
+    <script>
+        // Abre una ventana emergente para URLs incorrectas
+        function abrirVentanaEmergente(url) {
+            window.open(url, 'popup', 'width=600,height=400,scrollbars=no,resizable=no');
+        }
+
+        // Abre una nueva pestaña para URLs correctas
+        function abrirNuevaPestana(url) {
+            window.open(url, '_blank');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <p>
+            Te encuentras rodeado de páginas flotantes que contienen frases. Algunas parecen familiares, pero otras son incoherentes o absurdas, como si La Red las hubiera manipulado para confundirte. Las páginas brillan y cambian de posición constantemente, obligándote a enfocarte en encontrar el dicho correcto antes de que desaparezca.
+        </p>
+        <p>
+            Ariadna aparece junto a ti, su figura más estable que antes.<br>
+            — Este es el Archivo— explica. — Aquí se almacenaba la sabiduría colectiva de tu mundo. Dichos, refranes, palabras que transmitían la verdad de generación en generación. La Red los ha distorsionado, y ahora pocos recuerdan lo que significan—.
+        </p>
+        <p>
+            —¿Y qué debo hacer aquí?— preguntas.<br>
+            —Encuentra los dichos correctos. Al hacerlo, desbloquearás parte de tu memoria y abrirás el camino al siguiente nivel. Pero ten cuidado: si eliges mal, quedarás atrapado en este bucle, olvidando más de ti mismo cada vez—.
+        </p>
+        <div class="buttons">
+            <!-- Dicho correcto: abre en una nueva pestaña -->
+            <button onclick="abrirNuevaPestana('dichocorrecto1.html')">
+                Más vale tarde que nunca
+            </button>
+            <!-- Dicho incorrecto: abre una ventana emergente -->
+            <button onclick="abrirVentanaEmergente('dichoincorrecto1.html')">
+                Más vale nunca que tarde
+            </button>
+        </div>
+    </div>
+</body>
+</html>

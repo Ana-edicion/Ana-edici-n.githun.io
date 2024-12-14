@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Desafío: Encontrar los Patrones</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 24px;
+            background-color: black;
+            color: white;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        button {
+            background-color: lightblue;
+            color: black;
+            font-family: "Times New Roman", Times, serif;
+            font-size: 24px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: deepskyblue;
+        }
+    </style>
+    <script>
+        // Función para abrir nuevas ventanas con las narrativas
+        function abrirVentanaPatron1() {
+            const ventana = window.open("", "Patron 1", "width=600,height=400");
+            ventana.document.write(`
+                <html lang="es">
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <title>Patrón 1</title>
+                        <style>
+                            body {
+                                font-family: "Times New Roman", Times, serif;
+                                font-size: 24px;
+                                background-color: black;
+                                color: white;
+                                margin: 20px;
+                                line-height: 1.6;
+                            }
+                            button {
+                                background-color: lightblue;
+                                color: black;
+                                font-family: "Times New Roman", Times, serif;
+                                font-size: 24px;
+                                padding: 10px 20px;
+                                border: none;
+                                border-radius: 5px;
+                                cursor: pointer;
+                            }
+                            button:hover {
+                                background-color: deepskyblue;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <p>— Lo has logrado. Has resistido el caos. Esto es solo el comienzo, pero ya estás más cerca de recuperar lo que perdiste—. dice Ariadna</p>
+                        <p>Fragmento desbloqueado: Recuerdas un libro. Su textura, el peso en tus manos. Las páginas amarillentas desprendían ese aroma tenue, mezcla de papel antiguo y polvo, como un eco de épocas que creías olvidadas.</p>
+                        <p>Segundo Nivel: El Archivo Fragmentado</p>
+                        <!-- Corregido: Aquí redirecciona correctamente -->
+                        <button onclick="window.open('segundonivel.html', '_self');">Ir al Segundo Nivel</button>
+                        <br><br>
+                        <button onclick="window.open('primernivel.html', '_self');">Comenzar de nuevo</button>
+                    </body>
+                </html>
+            `);
+        }
+
+        function abrirVentanaPatron2() {
+            window.open('https://anagar57135.wixsite.com/scape-room-literario', '_self');
+        }
+
+        function abrirVentanaPatron3() {
+            window.open('https://anagar57135.wixsite.com/scape-room-literario', '_self');
+        }
+    </script>
+</head>
+<body>
+    <h1>El Desafío: Encontrar los Patrones</h1>
+    <h2>¿Qué harás?</h2>
+    <button onclick="abrirVentanaPatron1()">Patrón 1: Ojo, reloj y libro</button>
+    <button onclick="abrirVentanaPatron2()">Patrón 2: Montaña, ojo y sol</button>
+    <button onclick="abrirVentanaPatron3()">Patrón 3: Reloj, tormenta, volcán</button>
+</body>
+</html>
