@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dicho Correcto 2</title>
+    <style>
+           body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 24px;
+            background-color: black;
+            color: white;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        button {
+            background-color: lightblue;
+            color: black;
+            font-family: "Times New Roman", Times, serif;
+            font-size: 24px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function openWindow(message) {
+            const newWindow = window.open("", "_blank", "width=400,height=300");
+            newWindow.document.write(`
+                <html>
+                    <head>
+                        <title>Dicho</title>
+                    </head>
+                    <body style='background-color:black; color:white; font-family:Times New Roman; font-size:24px;'>
+                        <p>${message}</p>
+                    </body>
+                </html>
+            `);
+            newWindow.document.close();
+        }
+    </script>
+</head>
+<body>
+    <div class="content">
+        <p>Bien hecho, como recompensa aquí tienes un pedazo de tu memoria:</p>
+        <p>
+            Los domingos siempre olían a pasto recién cortado y a jugo de naranja en la hielera azul que papá llevaba al parque; recuerdo cómo corría con las piernas pequeñas detrás de mi hermana, directo a los columpios, mientras mamá nos miraba desde lejos con una sonrisa cansada y un libro en las manos. El viento me despeinaba cuando papá me empujaba más alto, gritándome entre risas que intentara tocar el cielo, y en esos instantes, me sentía tan ligero, como si de verdad pudiera volar. Al caer la tarde, nos sentábamos bajo un árbol inmenso a comer los sándwiches que mamá preparaba, y aunque eran solo pan y jamón, tenían el mejor sabor del mundo. A veces, cierro los ojos y aún puedo escuchar sus voces y el murmullo suave de las hojas, como si el tiempo se doblara por un momento para devolverme la calma de aquella infancia.
+    
+        </p>Este es el último, escoge correctamente para llegar al Corazón de La Red
+        <p>
+        <div class="buttons">
+            <button onclick="window.open('dichoincorrecto3.html', '_blank')">Quien mal anda, perdido acaba.</button>
+            <button onclick="window.open('dichocorrecto3.html', '_blank')">Cuando el río suena, piedras trae.</button>
+        </div>
+    </div>
+    </body>
+    </html>

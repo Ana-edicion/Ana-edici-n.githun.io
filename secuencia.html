@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Secuencia Incompleta</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: "Times New Roman", Times, serif;
+            font-size: 24px;
+            margin: 20px;
+        }
+        .titulo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .opciones {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin-right: 10px;
+            cursor: pointer;
+            background-color: #333;
+            color: white;
+            border: 2px solid white;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="titulo">
+        <p><b>La prueba se llama La Secuencia Incompleta, presta atención es mucho más fácil de lo que crees.</b></p>
+    </div>
+    <p>
+        Ante ti, la esfera negra comienza a fragmentarse en silencio, sus fragmentos luminosos girando hasta formar un conjunto de números flotantes en el aire. Los dígitos se organizan en filas precisas, como si el espacio mismo los sostuviera en equilibrio perfecto.
+    </p>
+    <p>
+        Sin embargo, algo rompe la armonía: una parte de la secuencia está incompleta. El vacío entre los números es evidente, como una grieta en un patrón perfecto. Tu mente se concentra de inmediato. Debes encontrar la lógica oculta, descifrar el orden y descubrir el número que falta.
+    </p>
+    <p>
+        El tiempo avanza, y el silencio se vuelve más pesado. La Red te observa, esperando a que falles.
+    </p>
+    <p><b>Secuencia:</b> 3, 9, 18, 30, ?, 63</p>
+    <div class="opciones">
+        <button onclick="abrirVentana('incorrecto.html')" aria-label="Seleccionar respuesta incorrecta: 45">45</button>
+        <button onclick="abrirVentana('elpatronvisual.html')" aria-label="Seleccionar respuesta correcta: 42">42</button>
+    </div>
+
+    <script>
+        function abrirVentana(archivo) {
+            // Validación básica para evitar errores si el archivo es incorrecto
+            if (!archivo) {
+                console.error("Archivo no especificado.");
+                return;
+            }
+            // Abre una nueva ventana con las dimensiones especificadas
+            window.open(archivo, '_blank', 'width=600,height=400,scrollbars=no,resizable=no');
+        }
+    </script>
+</body>
+</html>

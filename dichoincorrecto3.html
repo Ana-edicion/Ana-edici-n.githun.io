@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dicho Incorrecto</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            color: red;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 32px;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body onclick="abrirVentana()">
+    <div>
+    <p>
+       ¿Sabes qué es lo bueno de esto? Yo me divierto, pero tú no sales.
+    </p>
+    <p>
+        Da clic para continuar
+    </p>
+    </div>
+   
+    <script>
+        function abrirVentana() {
+            const ancho = 600;
+            const alto = 400;
+            const x = (window.innerWidth / 2) - (ancho / 2);
+            const y = (window.innerHeight / 2) - (alto / 2);
+            const ventana = window.open("", "Mensaje", `width=${ancho},height=${alto},left=${x},top=${y}`);
+            ventana.document.write(`
+                <style>
+                    body {
+                        background-color: black;
+                        color: red;
+                        font-family: 'Times New Roman', Times, serif;
+                        font-size: 32px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100vh;
+                        margin: 0;
+                        text-align: center;
+                    }
+                </style>
+                <div>HAZ MUERTO.</div>
+            `);
+        }
+    </script>
+</body>
+</html>

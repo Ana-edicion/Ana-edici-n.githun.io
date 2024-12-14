@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dicho Correcto 1</title>
+    <style>
+           body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 24px;
+            background-color: black;
+            color: white;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        button {
+            background-color: lightblue;
+            color: black;
+            font-family: "Times New Roman", Times, serif;
+            font-size: 24px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function abrirVentana() {
+            const nuevaVentana = window.open("", "_blank", "width=500,height=300");
+            nuevaVentana.document.write(`
+                <html>
+                    <head>
+                        <title>Ventana</title>
+                        <style>
+                            body {
+                                background-color: black;
+                                color: white;
+                                font-family: 'Times New Roman', Times, serif;
+                                font-size: 24px;
+                                margin: 20px;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                    </body>
+                </html>
+            `);
+            nuevaVentana.document.close();
+        }
+    </script>
+</head>
+<body>
+    <p>
+        Bien hecho. Estás a un paso más de recuperar un pedazo de lo que eras. 
+        Pero tienes que pasar por completo este nivel para poder desbloquearlo. 
+        Si eso es lo que deseas, escoge sabiamente Vidente.
+    </p>
+    <div class="buttons">
+        <button onclick="window.open('dichoincorrecto2.html', '_blank')">A lo hecho, recto</button>
+        <button onclick="window.open('dichocorrecto2.html', '_blank')">El que mucho abarca, poco aprieta</button>
+    </div>
+</div>
+</body>
+</html>

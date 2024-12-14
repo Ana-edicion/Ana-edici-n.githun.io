@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Contraseña del Núcleo</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: "Times New Roman", Times, serif;
+            font-size: 24px;
+            margin: 20px;
+        }
+        .opciones {
+            margin-top: 20px;
+        }
+        .opcion {
+            cursor: pointer;
+            color: cyan;
+            text-decoration: underline;
+        }
+        .opcion:hover {
+            color: lightgreen;
+        }
+    </style>
+    <script>
+        function abrirVentana(mensaje, esFinal, imagenUrl = null) {
+            if (esFinal) {
+                window.open("granfinal.html", "_blank");
+            } else {
+                const nuevaVentana = window.open("", "", "width=400,height=400");
+                nuevaVentana.document.write(`
+                    <html>
+                    <head>
+                        <title>Resultado</title>
+                        <style>
+                            body {
+                                background-color: black;
+                                color: red;
+                                font-family: 'Times New Roman', Times, serif;
+                                font-size: 32px;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                height: 100%;
+                                margin: 0;
+                            }
+                            img {
+                                max-width: 100%;
+                                height: auto;
+                                margin-top: 20px;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <p>${mensaje}</p>
+                        ${imagenUrl ? `<img src="${imagenUrl}" alt="Resultado">` : ""}
+                    </body>
+                    </html>
+                `);
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>
+        Bienvenido a la Fase 3: La Contraseña del Núcleo, donde la presión no solo es palpable... es letal.
+        Si pensabas que habías hecho algo impresionante al llegar hasta aquí, déjame recordarte que la verdadera
+        diversión apenas comienza. Y créeme, para ti, “diversión” tiene un sabor muy agrio.
+    </p>
+    <p>
+        Aquí está tu dilema, pequeño ratón atrapado:
+        <br>Contraseña parcial: A1$, C3#, F6%, ?
+    </p>
+    <p>Opciones:</p>
+    <div class="opciones">
+        <p class="opcion" onclick="abrirVentana('¡Correcto! Has avanzado, pero esto no termina aquí.', true)">• H10&</p>
+        <p class="opcion" onclick="abrirVentana('¡Oh! Parecías tan seguro... hasta que te diste cuenta que no tenías idea', false, 'https://cdn.memegenerator.es/imagenes/memes/full/31/80/31806427.jpg')">• I9&</p>
+        <p class="opcion" onclick="abrirVentana('Tantos intentos y al final solo fuiste otro cadáver más en el juego', false, 'https://www.memecreator.org/static/images/memes/4757138.jpg')">• J12@</p>
+    </div>
+    <p>
+        Oh, no pongas esa cara de confusión. Es solo una secuencia lógica, una mezcla de operaciones matemáticas y alfabéticas.
+        ¿Demasiado complicado? Bueno, claro, para alguien como tú que probablemente necesita ayuda para resolver un crucigrama de niños.
+    </p>
+    <p>
+        Cada error te acerca un poco más a la oscuridad eterna. Cada respuesta incorrecta es una risa más que yo guardaré en mi
+        colección de fracasos humanos. Así que, ¿qué será? ¿La opción que parece correcta, o la que te lleva directamente a un final explosivo?
+    </p>
+    <p>
+        No hay presión, claro… salvo la del tiempo, de tu destino y de mi diversión al ver cómo te retuerces. Piénsalo bien, pero no te tardes demasiado.
+        El reloj avanza, y créeme, no quieres saber qué pasa si se acaba.
+    </p>
+    <p>Buena suerte... aunque, siendo sincero, no creo que la merezcas.</p>
+</body>
+</html>

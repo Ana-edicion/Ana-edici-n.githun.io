@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Patrón Visual</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 24px;
+            background-color: black;
+            color: white;
+            margin: 20px;
+        }
+        .image-container {
+            margin: 20px 0;
+        }
+        img {
+            display: block;
+            margin: 10px auto;
+            width: 200px; /* Ancho fijo para todas las imágenes */
+            height: 200px; /* Alto fijo para todas las imágenes */
+            object-fit: cover; /* Ajusta la imagen dentro del área sin deformarla */
+        }
+        a {
+            color: lightblue;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+            margin-top: 5px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <p>Mientras más avances, más difícil.</p>
+    <h1>Bienvenido al patrón visual</h1>
+    <p>¿Cuál no pertenece a está secuencia?</p>
+
+    <div class="image-container">
+        <div>
+            <img src="https://roca.com.co/wp-content/uploads/2024/09/01-423562-000.webp" alt="Triángulo equilátero rojo">
+            <a href="#" onclick="openMessageWindow('No estudiaste cuando eras pequeño ¿verdad?')">Triángulo equilátero rojo</a>
+        </div>
+        <div>
+            <img src="https://ceramicaparaarquitectura.com/wp-content/uploads/2023/04/hexagono_ceramico-naranja-25x29-ceramica-a-mano_alzada-2.jpg" alt="Hexágono cafe simétrico">
+            <a href="#" onclick="openMessageWindow('Nunca había conocido a una persona tan idiota. Los otros por lo menos si pasaron esta prueba.')">Hexágono cafe simétrico</a>
+        </div>
+        <div>
+            <img src="https://w7.pngwing.com/pngs/42/18/png-transparent-blue-web-colors-yellow-drawing-blue-square-square-blue-illustration-miscellaneous-purple-blue-thumbnail.png" alt="Cuadrado azul con rotación de 45°">
+            <a href="#" onclick="openMessageWindow('Sin palabras... La respuesta es demasiado obvia')">Cuadrado azul</a>
+        </div>
+        <div>
+            <img src="https://w7.pngwing.com/pngs/858/73/png-transparent-pentagon-shape-polygon-hexagon-angle-geometric-shapes-rectangle-triangle-geometric-shape-thumbnail.png" alt="Pentágono amarillo simétrico">
+            <a href="#" onclick="openMessageWindow('Morir de esta forma es todo un arte y tú eres todo un artista')">Pentágono amarillo simétrico</a>
+        </div>
+        <div>
+            <img src="https://thumbs.dreamstime.com/b/formas-simples-b%C3%A1sicas-verdes-del-tri%C3%A1ngulo-escaleno-aisladas-en-el-fondo-blanco-icono-geom%C3%A9trico-o-s%C3%ADmbolo-de-la-forma-144602438.jpg" alt="Triángulo verde con lados desiguales">
+            <a href="la_contrasela_del_nucleo.html" target="_blank">Triángulo verde con lados desiguales</a>
+        </div>
+    </div>
+
+    <script>
+        function openMessageWindow(message) {
+            const newWindow = window.open('', '_blank', 'width=400,height=400');
+            newWindow.document.write(`
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Mensaje</title>
+                    <style>
+                        body {
+                            font-family: "Times New Roman", Times, serif;
+                            font-size: 32px;
+                            background-color: black;
+                            color: red;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 100vh;
+                            margin: 0;
+                            text-align: center;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <p>${message}</p>
+                </body>
+                </html>
+            `);
+        }
+    </script>
+</body>
+</html>
